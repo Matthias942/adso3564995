@@ -235,7 +235,7 @@
 <section>
         <h2 class="subtitle">
             10-Reverse Numbering
-            <span> @- </span>
+            <span style="font-size: 1rem;"> @- </span>
         </h2>
         <small>Inverts numbering order.</small>
         <h3>Examples: </h3>
@@ -261,7 +261,7 @@
 <section>
         <h2 class="subtitle">
             11-Base Numbering
-            <span> @n </span>
+            <span style="font-size: 1rem;"> @n </span>
         </h2>
         <small>Defines a base number for sequences.</small>
         <h3>Examples: </h3>
@@ -293,12 +293,12 @@
         <p>section>article>div^p ↔️</p>
         <h3>Result:</h3>
 
-<xmp><ul>
-<li class="num3"></li>
-<li class="num4"></li>
-<li class=“num5"></li>
-<li class=“num6"></li>
-</ul>
+<xmp><section>
+<article>
+<div></div>
+</article>
+<p></p>
+</section>
 </xmp>
    </section>
 
@@ -318,11 +318,11 @@
         </h2>
         <small>Groups elements together.</small>
         <h3>Examples: </h3>
-        <p>(header>nav)(section>article) ↔️</p>
+        <p>(header>nav)+(section>article) ↔️</p>
         <h3>Result:</h3>
 
 <xmp>
-    <header>
+    <header>    
         <nav></nav>
     </header>
     <section>
@@ -342,14 +342,16 @@
    <section>
         <h2 class="subtitle">
             14-Lorem
-            <span> lorem </span>
+            <span style="font-size: 0.5rem;"> Lorem </span>
         </h2>
         <small>Generates placeholder text.</small>
         <h3>Examples: </h3>
-        <p> ↔️</p>
+        <p>lorem ↔️</p>
+        <p>lorem20 ↔️</p>
+        <p>lorem*5 ↔️</p>
         <h3>Result:</h3>
 
-<xmp>(header>nav)(section>article) </xmp>
+<xmp>lorem</xmp>
    </section>
 
 
@@ -361,14 +363,23 @@
    <section>
         <h2 class="subtitle">
             15-HTML Documents
-            <span>  </span>
+            <span> ! </span>
         </h2>
         <small>Creates various HTML document types.</small>
         <h3>Examples: </h3>
-        <p> ↔️</p>
+        <p> html:xs ↔️</p>
+        <p> html:xt ↔️</p>
+        <p> html:4s ↔️</p>
+        <p> html:4t ↔️</p>
+        <p> html:5 ↔️</p>
         <h3>Result:</h3>
 
-<xmp>(header>nav)(section>article) </xmp>
+<xmp><html:xs></html:xs>
+<html:xt></html:xt>
+<html:4s></html:4s>
+<html:4ts></html:4ts>
+<html:5></html:5>
+</xmp>
    </section>
 
 
@@ -380,14 +391,16 @@
    <section>
         <h2 class="subtitle">
             16-Meta Tags
-            <span>  </span>
+            <span style="font-size: 0.5rem;"> Meta </span>
         </h2>
         <small>Generates meta tags.</small>
         <h3>Examples: </h3>
-        <p> ↔️</p>
+        <p> meta:vp ↔️</p>
         <h3>Result:</h3>
 
-<xmp>(header>nav)(section>article) </xmp>
+<xmp><meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+</xmp>
    </section>
 
 
@@ -400,7 +413,7 @@
       <section>
         <h2 class="subtitle">
             17-Challenge
-            <span>  </span>
+            <span> 🚀 </span>
         </h2>
         <small>Generates Emmet challenges for practice.</small>
         <h3>Examples: </h3>
