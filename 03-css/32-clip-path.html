@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>32-clip-path</title>
     <link rel="stylesheet" href="../src/css/master.css">
+    <style>
+        section {
+            div.clip {
+                background: url(imgs/pittsburgh.jpg)
+                            no-repeat center /cover;
+                margin: 2rem auto;
+                height: 240px;
+                width: 340px;
+                transition: all 0.5s ease   ;
+                &.clip1 {
+                    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+                    &:hover {
+                        clip-path: polygon(50% 0%, 100% 0, 100% 30%, 100% 59%, 100% 100%, 54% 100%, 24% 100%, 0 100%, 0 40%, 0 0);
+                    }
+                }
+                &.clip2 {
+                    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+
+                    &:hover {
+                        clip-path: polygon(0 25%, 0 0, 35% 0%, 65% 0%, 100% 0, 100% 25%, 100% 51%, 100% 100%, 65% 100%, 35% 100%, 0 100%, 0 59%);
+
+                    }
+                }
+            }
+        }
+    </style>
 </head>
 <body class="css">
     <nav class="goback">
@@ -21,8 +48,11 @@
 </h3>
     </header>
     <section>
-        <h3 class="subtitle">Subtitle: </h3>
-    </section>
+        <h3 class="subtitle">Example 01: </h3>
+        <div class="clip clip1"></div>
+        <h3 class="subtitle">Example 02: </h3>
+        <div class="clip clip2"></div>
+    </section>  
 </main>    
 </body>
 </html>
