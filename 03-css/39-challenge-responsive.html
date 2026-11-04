@@ -3,25 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>39-challenge-responsive</title>
-    <link rel="stylesheet" href="../src/css/master.css">
+    <title>38-Media Queries</title>
+        <style>
+        * {
+        scroll-behavior: smooth;
+        transition: all 0.4s ease;
+    }
+
+    body {
+        background: linear-gradient(#000, transparent 100%),
+                    url(imgs/fondo\ the\ flash\ ultimo.jpg) no-repeat center / cover;
+        color: #fff;
+        font-family: 'UnifrakturCook', sans-serif;
+        padding: 0;
+        margin: 0 auto;
+        background-attachment: fixed;
+
+        main {
+            padding: 1rem;
+            margin: 2rem auto;
+            width: 1228px;
+            height: 100%;
+
+            header {
+                figure.logo {
+                    background: url(imgs/the_flash_sticker_transparente.png) no-repeat center;
+                    padding: 0;
+                    height: 1500px;
+                    margin: 0 auto;
+                    width: 2000px;
+                    zoom: 0.3;
+                    filter: drop-shadow(10px 10px 20px #fff);
+                }
+
+                menu {
+                    margin: 0;
+                    padding: 0;
+
+                    a:is(:link, :visited) {
+                        color: #ededed;
+                        font-size: 1.5rem;
+                        padding: 1rem;
+                        display: inline-block;
+                        text-align: center;
+                        text-decoration: none;
+                        width: 243px;
+                        height: 243px;
+                        border-radius: 12px;
+                        margin: 0.5rem;
+                        border: 6px solid black;
+                        filter: sepia(0.7);
+
+                        &:first-of-type {
+                            background: url(imgs/Barry\ Alen.jpg) no-repeat 75% center / cover;
+                        }
+
+                        &:nth-of-type(2) {
+                            background: url(imgs/Reverse\ Flash.jpg) no-repeat center / cover;
+                        }
+
+                        &:nth-of-type(3) {
+                            background: url(imgs/zoom.jpg) no-repeat center / cover;
+                        }
+
+                        &:nth-of-type(4) {
+                            background: url(imgs/savitar.png) no-repeat center / cover;
+                        }
+
+                        &:hover {
+                            filter: grayscale(0%);
+                            color: rgb(253, 251, 251);
+                            font-weight: bold;
+                            font-size: 3rem;
+                            text-shadow: 2px 2px 2px #000;
+                            box-shadow: 0 0 20px #fafafa;
+                        }
+                    }
+                }
+            }
+
+            section {
+                overflow: hidden;
+                padding: 0 30px;
+
+                h3 {
+                    text-align: center;
+                    font-size: 3.5rem;
+                    text-shadow: 2px 2px 10px #000000;
+                    color: #1a747a;
+                    clear: both;
+                }
+
+                p {
+                    line-height: 2rem;
+                    text-align: justify;
+                    font-size: 1.8rem;
+                    background-color: #0009;
+                    padding-right: 0.5rem;
+                }
+
+                img {
+                    width: 200px;
+                    float: left;
+                    margin: 0.5rem 1rem 0.5rem 0.5rem;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        box-shadow: 0 0 20px #fff;
+                    }
+                }
+            }
+        }
+    }   /* <-- esta es la llave que te faltaba: cierra body */
+
+
+    /* Media Queries */
+
+    /* Breakpoint: 1288px (tablet) */
+    @media (max-width: 1288px) {
+        body {
+            main {
+                width: 800px;
+
+                header {
+                    figure.logo {
+                        zoom: 0.35;
+                    }
+
+                    menu {
+                        a:is(:link, :visited) {
+                            width: 310px;
+                            height: 310px;
+                        }
+                    }
+                }
+
+                section {
+                    h3 {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Breakpoint: 860px (celular) */
+    @media (max-width: 860px) {
+        body {
+            background-attachment: scroll;
+
+            main {
+                width: 320px;
+                padding: 0.5rem;
+
+                header {
+                    figure.logo {
+                        zoom: 0.16;
+                        }
+
+                        menu {
+                            a:is(:link, :visited) {
+                                display: block;
+                                margin: 0.5rem auto;
+                                width: 240px;
+                                height: 240px;
+                                font-size: 1.3rem;
+
+                                &:hover {
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                    }
+
+                    section {
+                        h3 {
+                            font-size: 2.3rem;
+                        }
+
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 1.7rem;
+                        }
+
+                        img     {
+                            float: none;
+                            display: block;
+                            margin: 0 auto 1rem;
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
 </head>
-<body class="css">
-    <nav class="goback">
-        <a href="index.html">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
-        </a>
-        
-    </nav>
-<main>
-    <header class="mmenu internal">
-        <h1>39-challenge-responsive</h1>
-        <img src="../src/images/logo-css.png" alt="CSS">
-        <h3>Solved</h3>
-    </header>
-    <section>
-        <h3 class="subtitle">Subtitle: </h3>
-    </section>
-</main>    
+<body>
+    <main>
+        <header>
+            <figure class="logo"></figure>
+            <menu>
+                <a href="#1">Flash</a>
+                <a href="#2">Reverse</a>
+                <a href="#3">Zoom</a>
+                <a href="#4">Savitar</a>
+            </menu>
+        </header>
+        <section>
+            <article>
+                <h3>Flash</h3>
+                <img class="gojo" src="imgs/Barry Alen.jpg" alt="Gojo">
+                <p>
+                    Barry Allen es el protagonista de la serie. Es un joven científico forense que trabaja en el Departamento de Policía de Central City. Después de ser alcanzado por un rayo durante una explosión de un acelerador de partículas, obtiene una velocidad sobrehumana y descubre que puede moverse mucho más rápido que cualquier persona.
+
+Con el paso del tiempo, Barry aprende a controlar sus poderes y se convierte en el héroe conocido como Flash. Su principal objetivo es proteger a los ciudadanos, detener a los criminales y mantener a salvo a su familia y amigos. Se caracteriza por ser una persona amable, valiente y dispuesta a arriesgar su vida por los demás.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Reverse</h3>
+                <img class="toji" src="imgs/Reverse Flash.jpg" alt="Toji">
+                <p>
+                   Eobard Thawne, conocido como Flash Reverso, es uno de los enemigos más importantes y peligrosos de Barry Allen. Proviene del futuro y tiene una gran obsesión con Flash, ya que su admiración por él termina convirtiéndose en odio y deseo de venganza.
+
+Al igual que Barry, posee una velocidad extraordinaria, pero utiliza sus habilidades para causar daño y cambiar los acontecimientos a su favor. Su traje amarillo y sus rayos rojos lo hacen fácilmente reconocible. Es un personaje inteligente, manipulador y calculador, capaz de crear planes para destruir la vida de Barry y convertirse en su mayor enemigo.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Zoom</h3>
+                <img class="sukuna" src="imgs/zoom.jpg" alt="Sukuna">
+                <p>
+                    Hunter Zolomon, conocido como Zoom, es uno de los villanos más aterradores de la serie. Aparece como un velocista de otra Tierra y se caracteriza por su traje completamente negro, sus ojos brillantes y su impresionante velocidad.
+
+Su principal objetivo es convertirse en el hombre más rápido del multiverso, por lo que busca derrotar a otros velocistas y demostrar que nadie puede superarlo. A diferencia de otros enemigos, Zoom utiliza el miedo como una de sus principales armas para controlar a sus víctimas. Es cruel, violento y muy poderoso, convirtiéndose en una de las amenazas más grandes que ha enfrentado Barry Allen.
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h3>Savitar</h3>
+                <img class="yuta" src="imgs/savitar.png" alt="Yuta">
+                <p>
+                    Savitar es conocido como el Dios de la Velocidad y es uno de los enemigos más misteriosos de la serie. Su apariencia es diferente a la de los demás velocistas, ya que utiliza una enorme armadura metálica que lo hace parecer un ser robótico.
+
+Posee una velocidad impresionante, fuerza y habilidades que lo convierten en un rival muy difícil de derrotar. Su historia está relacionada directamente con Barry Allen y con los acontecimientos de su futuro. Savitar busca vengarse y cambiar el destino de las personas que lo rodean. Es un personaje lleno de misterio, rencor y deseos de venganza, que representa uno de los mayores desafíos emocionales y físicos para Flash.
+                </p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

@@ -11,32 +11,33 @@
                 display: block;
                 margin: 2rem auto;
 
-                &.translation01 {
+
+                &.transition01 {
                     transition: transform 0.6s ease;
 
                     &:hover {
                         transform: scale(1.3);
                     }
                 }
-                &.translation02 {
+                &.transition02 {
                     transition: all 0.2s ease-out;
 
                     &:hover {
                         transform: rotate(-0.5turn);
                     }
                 }
-                &.translation03 {
+                &.transition03 {
                     transition: all 1s ease-in;
 
                     &:hover {
-                        transform: rotate(100deg);
+                        transform: RotateY(180deg);
                     }
                 }
-                &.translation04 {
-                    transition: all 1s ease-in;
+                &.transition04 {
+                    transition: all 0.4s linear;
 
                     &:hover {
-                        transform: translateX(80px);
+                        transform: TranslateX(80px);
                     }
                 }
                 
